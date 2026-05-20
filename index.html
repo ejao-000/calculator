@@ -10,20 +10,46 @@
 
   <div class="calculator">
 
-    <!-- DISPLAY -->
+    <!-- DISPLAY AREA -->
     <div class="display">
       <div class="expr" id="expr"></div>
       <div class="result" id="result">0</div>
+    </div>
+
+    <!-- HISTORY BAR -->
+    <div class="history-bar">
+      <button class="hist-icon-btn" id="hist-toggle-btn" onclick="toggleHistory()" title="History">
+        <!-- Clock-with-arrow icon (SVG) -->
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/>
+          <path d="M3 3v5h5"/>
+          <polyline points="12 7 12 12 15 15"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- HISTORY DROPDOWN -->
+    <div class="history-dropdown" id="history-dropdown">
+      <div class="history-inner">
+        <div class="history-top-bar">
+          <span class="history-title">History</span>
+          <button class="clear-history-btn" onclick="clearHistory()">Clear</button>
+        </div>
+        <ul class="history-list" id="history-list">
+          <li class="history-empty">No calculations yet</li>
+        </ul>
+      </div>
     </div>
 
     <!-- BUTTONS -->
     <div class="buttons">
 
       <!-- Row 1 -->
-      <button class="btn clear span2" onclick="clearAll()">CLR</button>
-      <button class="btn op" onclick="backspace()">⌫</button>
+      <button class="btn fn" onclick="clearAll()">AC</button>
+      <button class="btn fn" onclick="toggleSign()">+/−</button>
+      <button class="btn fn" onclick="inputPercent()">%</button>
       <button class="btn op" onclick="input('/')">÷</button>
-  
+
       <!-- Row 2 -->
       <button class="btn" onclick="input('7')">7</button>
       <button class="btn" onclick="input('8')">8</button>
@@ -43,7 +69,7 @@
       <button class="btn op" onclick="input('+')">+</button>
 
       <!-- Row 5 -->
-      <button class="btn span2" onclick="input('0')">0</button>
+      <button class="btn zero span2" onclick="input('0')">0</button>
       <button class="btn" onclick="input('.')">.</button>
       <button class="btn eq" onclick="calculate()">=</button>
 
