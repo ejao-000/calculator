@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.calculator {
+    width: 350px;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+#themeBtn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.display input {
+    width: 100%;
+    height: 90px;
+    border: none;
+    outline: none;
+    text-align: right;
+    font-size: 40px;
+    padding-right: 15px;
+    background: transparent;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    height: 70px;
+    border: none;
+    border-radius: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.equal {
+    background: #4f8cff;
+    color: white;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+/* DARK THEME */
+body.dark {
+    background: #071521;
+}
+
+body.dark .calculator {
+    background: #102233;
+}
+
+body.dark input,
+body.dark button {
+    color: white;
+}
+
+body.dark button {
+    background: #1c3347;
+}
+
+/* LIGHT THEME */
+body.light {
+    background: #f2f2f2;
+}
+
+body.light .calculator {
+    background: white;
+}
+
+body.light button {
+    background: #e5e5e5;
+}
+
+/* BLUE THEME */
+body.blue {
+    background: #0a1930;
+}
+
+body.blue .calculator {
+    background: #102a52;
+}
+
+body.blue button {
+    background: #183d72;
+    color: white;
+}
+
+/* GREEN THEME */
+body.green {
+    background: #081c15;
+}
+
+body.green .calculator {
+    background: #1b4332;
+}
+
+body.green button {
+    background: #2d6a4f;
+    color: white;
+}
+
+/* PURPLE THEME */
+body.purple {
+    background: #1a102e;
+}
+
+body.purple .calculator {
+    background: #3c1361;
+}
+
+body.purple button {
+    background: #5a189a;
+    color: white;
+}
